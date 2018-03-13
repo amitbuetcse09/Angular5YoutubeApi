@@ -1,0 +1,23 @@
+<div class="container">
+  <alert type="success">hello</alert>
+  <div class="row">
+    <table class="table table-inverse">
+      <thead class="">
+      <tr>
+        <th class="text-center">Channel ID</th>
+        <th class="text-center">Subscribers Count</th>
+        <th class="text-center">Channel Total View</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr >
+        <td class="text-center"><a href="https://www.youtube.com/channel/{{_ytArray.items[0].id}}"> Go to the Channel </a></td>
+
+        <td class="text-center">{{_ytArray.items[0].statistics.subscriberCount}}</td>
+        <td class="text-center">{{_ytArray.items[0].statistics.viewCount}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
