@@ -1,0 +1,1 @@
+//       resultArray => console.log("channel id: "+resultArray.items[0].id + "channel subscriber"+resultArray.items[0].statistics.subscriberCount),
