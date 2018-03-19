@@ -23,8 +23,9 @@
     "@angular/router": "^5.2.0",
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
-    "ngx-bootstrap": "^2.0.2",
-    "rxjs": "^5.5.6",
+    "ngx-bootstrap": "^2.0.3",
+    "npm": "^5.7.1",
+    "rxjs": "^5.5.7",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
