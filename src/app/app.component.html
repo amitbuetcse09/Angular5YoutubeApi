@@ -1,5 +1,10 @@
 <div class="container">
-  <alert type="success">hello</alert>
+  <div class="success h2" >Channel Details</div>
+
+  <div class="my-2">
+    <input type="text" #link placeholder="Set Channel Link" size="70" >
+    <button type="button"  (click)="showChannelDetails(link.value)" class="btn btn-success" > Show Details </button>
+  </div>
   <div class="row">
     <table class="table table-inverse">
       <thead class="">
@@ -12,7 +17,6 @@
       <tbody>
       <tr >
         <td class="text-center"><a href="https://www.youtube.com/channel/{{_ytArray.items[0].id}}"> Go to the Channel </a></td>
-
         <td class="text-center">{{_ytArray.items[0].statistics.subscriberCount}}</td>
         <td class="text-center">{{_ytArray.items[0].statistics.viewCount}}</td>
       </tr>

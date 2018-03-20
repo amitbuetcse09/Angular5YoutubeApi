@@ -19,6 +19,17 @@ private _ytUrl = 'https://www.googleapis.com/youtube/v3/channels?part=statistics
       .catch(this.handleError);
   }
 
+  getChannelDetail(link): Observable<ApiInterface[]> {
+    this._ytUrl = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=' +link+
+      '&key=AIzaSyBveMbX-5H9pPMqsOYGMaiM2PsHc9wVQkk';
+    return this.http
+      .get(this._ytUrl)
+      .map((response: Response) => {
+        return <ApiInterface[]>response.json();
+      })
+      .catch(this.handleError);
+  }
+
   private handleError(error: Response) {
     return Observable.throw(error.statusText);
   }

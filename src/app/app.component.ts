@@ -8,6 +8,7 @@ import { ApiInterface } from './api-interface';
   styleUrls: ['./app.component.scss'],
   providers: [ApiService]
 })
+
 export class AppComponent implements OnInit {
   title = 'app';
   _ytArray: ApiInterface[];
@@ -18,6 +19,14 @@ export class AppComponent implements OnInit {
        resultArray => this._ytArray = resultArray,
        error => console.log('Error :: ' + error)
      );
+  }
+  showChannelDetails(channelLink): void {
+    var linkArray = channelLink.split("/");
+    this.apiService.getChannelDetail(linkArray[4])
+      .subscribe(
+        resultArray => this._ytArray = resultArray,
+        error => console.log('Error :: ' + error)
+      );
   }
      ngOnInit(): void {
     this.getPosts();
